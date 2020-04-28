@@ -16,14 +16,14 @@ import static org.junit.Assert.*;
 /**
  * Basado en: Lars Vogel, Fabian Pfaff. «Unit tests with Mockito – Tutorial».
  * Vogella. Version 1.9. 10-4-2017. 
- * http://www.vogella.com/tutorials/Mockito/article.html [accedido el 25-4-2019]
+ * http://www.vogella.com/tutorials/Mockito/article.html [accedido el 28-4-2020]
  */
-public class MiClaseTest {
+public class MiDependenciaTest {
 
     @Test
     public void testSetReturnValue_1() {
         //  create mock
-        MiClase mock = Mockito.mock(MiClase.class);
+        MiDependencia mock = Mockito.mock(MiDependencia.class);
 
         // define return value for method obtenerId()
         when(mock.obtenerId()).thenReturn(43);
@@ -36,7 +36,7 @@ public class MiClaseTest {
     @Test
     public void testSetReturnValue_2() {
         //  create mock
-        MiClase mock = Mockito.mock(MiClase.class);
+        MiDependencia mock = Mockito.mock(MiDependencia.class);
 
         // define return value for method obtenerId()
         doReturn(43).when(mock).obtenerId();
@@ -91,10 +91,10 @@ public class MiClaseTest {
     public void testReturnValueInDependentOnMethodClass()  {
         Comparable c= mock(Comparable.class);
         when(c.compareTo(isA(Object.class))).thenReturn(0);
-        when(c.compareTo(isA(MiClase.class))).thenReturn(87);
+        when(c.compareTo(isA(MiDependencia.class))).thenReturn(87);
         when(c.compareTo(isA(String.class))).thenReturn(105);
         //assert
-        assertEquals(87 , c.compareTo(new MiClase()));
+        assertEquals(87 , c.compareTo(new MiDependencia()));
         assertEquals(105 , c.compareTo("String"));
         assertEquals(0 , c.compareTo(System.out));
     }
@@ -116,7 +116,7 @@ public class MiClaseTest {
     @Test
     public void testVerify()  {
         // Creación y configuración del mock
-        MiClase mock = Mockito.mock(MiClase.class);
+        MiDependencia mock = Mockito.mock(MiDependencia.class);
 
         // Invocación a varios métodos del mock
         mock.probar(12);

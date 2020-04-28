@@ -9,14 +9,16 @@ import org.mockito.junit.MockitoJUnitRunner;
 import static org.mockito.Mockito.*;
 
 /**
- * Fuente: Lars Vogel. «Unit tests with Mockito – Tutorial». 2016
- * http://www.vogella.com/tutorials/Mockito/article.html
+ * Basado en: Lars Vogel, Fabian Pfaff. «Unit tests with Mockito – Tutorial».
+ * Vogella. Version 1.9. 10-4-2017.
+ * http://www.vogella.com/tutorials/Mockito/article.html [accedido el 28-4-2020]
  */
+
 @RunWith(MockitoJUnitRunner.class)
-public class MiClaseTestAnnotated {
+public class MiDependenciaTestAnotada {
 
     @Mock
-    private MiClase mock;
+    private MiDependencia mock;
 
     @Test
     public void testVerify()  {

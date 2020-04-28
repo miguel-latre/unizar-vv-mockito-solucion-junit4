@@ -1,6 +1,6 @@
 package es.unizar.eina.vv6f.pruebas.mockito.ejemplo;
 
-public class MiClase {
+public class MiDependencia {
     public int obtenerId() {
         return 0;
     }
