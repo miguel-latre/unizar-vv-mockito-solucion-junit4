@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ejercicios-mockito.iml" filepath="$PROJECT_DIR$/ejercicios-mockito.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unizar-vv-mockito.iml" filepath="$PROJECT_DIR$/unizar-vv-mockito.iml" />
     </modules>
   </component>
 </project>
