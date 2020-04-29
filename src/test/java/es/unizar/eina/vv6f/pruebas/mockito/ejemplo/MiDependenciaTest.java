@@ -127,7 +127,7 @@ public class MiDependenciaTest {
         }
 
         // Comprobación: el método probar ha sido invocado una vez con el parámetro 12
-        verify(mock).probar(ArgumentMatchers.eq(12));
+        verify(mock).probar(eq(12));
 
         // Comprobación: el método obtenerId ha sido invocado 2 veces
         verify(mock, times(2)).obtenerId();
