@@ -3,11 +3,10 @@ package es.unizar.eina.vv6f.pruebas.mockito.ejercicio1;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 
 public class MyPublisherTest {
-    private  static final String FIRST_MESSAGE = "1st message";
+    private static final String FIRST_MESSAGE = "1st message";
     private static final String SECOND_MESSAGE = "2nd message";
 
     @Test
@@ -26,7 +25,7 @@ public class MyPublisherTest {
         publisher.publish(FIRST_MESSAGE);
 
         // Comprobación del estado del mock
-        verify(subscriber).receive(eq(FIRST_MESSAGE));
+        verify(subscriber).receive(FIRST_MESSAGE);
     }
 
     @Test
@@ -47,8 +46,8 @@ public class MyPublisherTest {
         publisher.publish(FIRST_MESSAGE);
 
         // Comprobación del estado de los mocks
-        verify(subscriber1).receive(eq(FIRST_MESSAGE));
-        verify(subscriber2).receive(eq(FIRST_MESSAGE));
+        verify(subscriber1).receive(FIRST_MESSAGE);
+        verify(subscriber2).receive(FIRST_MESSAGE);
     }
 
     @Test
@@ -70,10 +69,10 @@ public class MyPublisherTest {
         publisher.publish(SECOND_MESSAGE);
 
         // Comprobación del estado de los mocks
-        verify(subscriber1).receive(eq(FIRST_MESSAGE));
-        verify(subscriber2).receive(eq(FIRST_MESSAGE));
-        verify(subscriber1).receive(eq(SECOND_MESSAGE));
-        verify(subscriber2).receive(eq(SECOND_MESSAGE));
+        verify(subscriber1).receive(FIRST_MESSAGE);
+        verify(subscriber2).receive(FIRST_MESSAGE);
+        verify(subscriber1).receive(SECOND_MESSAGE);
+        verify(subscriber2).receive(SECOND_MESSAGE);
     }
 
     @Test
@@ -100,9 +99,9 @@ public class MyPublisherTest {
         publisher.publish(SECOND_MESSAGE);
 
         // Comprobación del estado de los mocks
-        verify(subscriber1).receive(eq(FIRST_MESSAGE));
-        verify(subscriber1).receive(eq(SECOND_MESSAGE));
-        verify(subscriber2).receive(eq(SECOND_MESSAGE));
+        verify(subscriber1).receive(FIRST_MESSAGE);
+        verify(subscriber1).receive(SECOND_MESSAGE);
+        verify(subscriber2).receive(SECOND_MESSAGE);
     }
 
 }

@@ -16,6 +16,8 @@ public class ResumenVentasTest {
             + "Cliente   Importe" + System.lineSeparator()
             + "-------   -------" + System.lineSeparator();
 
+    private static final String RESULTADO_NINGUNA_VENTA = RESULTADO_VACIO;
+
     private static final String RESULTADO_UNA_VENTA
             = RESULTADO_VACIO
             + String.format(ResumenVentas.FORMATO_RESUMEN_CLIENTE, 150, 15.0);
@@ -77,7 +79,7 @@ public class ResumenVentasTest {
         final DataInput f = mock(DataInput.class);
         when(f.readInt()).thenThrow(new EOFException());
         ResumenVentas.escribirResumen(f);
-        assertEquals(RESULTADO_VACIO, outSustituta.toString());
+        assertEquals(RESULTADO_NINGUNA_VENTA, outSustituta.toString());
     }
 
     @Test

@@ -12,22 +12,22 @@ public class Venta {
 	/**
 	 * Código del producto vendido en esta venta
 	 */
-	private int producto;
+	private final int producto;
 
 	/**
 	 * Código del cliente al que se le realizó esta venta
 	 */
-	private int cliente;
+	private final int cliente;
 
 	/**
 	 * Cantidad de producto vendido en esta venta
 	 */
-	private int cantidad;
+	private final int cantidad;
 
 	/**
 	 * Precio unitario del producto aplicado en esta venta
 	 */
-	private double precioUnitario;
+	private final double precioUnitario;
 
 	/**
 	 * Pre: cantidad > 0; precioUnitario > 0.0
