@@ -21,27 +21,27 @@ public class MiDependenciaTest {
 
     @Test
     public void testSetReturnValue_1() {
-        //  create mock
-        MiDependencia mock = Mockito.mock(MiDependencia.class);
+        //  create stub
+        MiDependencia stub = Mockito.mock(MiDependencia.class);
 
         // define return value for method obtenerId()
-        when(mock.obtenerId()).thenReturn(43);
+        when(stub.obtenerId()).thenReturn(43);
 
-        // use mock in test....
-        assertEquals(43, mock.obtenerId());
+        // use stub in test....
+        assertEquals(43, stub.obtenerId());
     }
 
 
     @Test
     public void testSetReturnValue_2() {
-        //  create mock
-        MiDependencia mock = Mockito.mock(MiDependencia.class);
+        //  create stub
+        MiDependencia stub = Mockito.mock(MiDependencia.class);
 
         // define return value for method obtenerId()
-        doReturn(43).when(mock).obtenerId();
+        doReturn(43).when(stub).obtenerId();
 
-        // use mock in test....
-        assertEquals(43, mock.obtenerId());
+        // use stub in test....
+        assertEquals(43, stub.obtenerId());
     }
 
 
@@ -102,12 +102,12 @@ public class MiDependenciaTest {
     // this test demonstrates how use doThrow
     @Test(expected = IOException.class)
     public void testForIOException() throws IOException {
-        // create an configure mock
-        OutputStream mockStream = mock(OutputStream.class);
-        doThrow(new IOException()).when(mockStream).close();
+        // create an configure stub
+        OutputStream stubStream = mock(OutputStream.class);
+        doThrow(new IOException()).when(stubStream).close();
 
-        // use mock
-        OutputStreamWriter streamWriter = new OutputStreamWriter(mockStream);
+        // use stub
+        OutputStreamWriter streamWriter = new OutputStreamWriter(stubStream);
         streamWriter.close();
     }
 
