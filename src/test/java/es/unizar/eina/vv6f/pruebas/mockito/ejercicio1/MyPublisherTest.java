@@ -11,7 +11,7 @@ public class MyPublisherTest {
 
     @Test
     public void test_1subscriber_1message() {
-        // Creación del mock
+        // Creación del mock: sustituto de la dependencia
         Subscriber subscriber = Mockito.mock(Subscriber.class);
 
         // Creación del objeto de pruebas
