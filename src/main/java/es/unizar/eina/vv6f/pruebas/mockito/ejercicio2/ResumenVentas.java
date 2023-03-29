@@ -13,7 +13,7 @@ import java.util.Scanner;
  * operador el nombre de un fichero de ventas y escribe en la pantalla un
  * resumen de las ventas, listando, para cada código de cliente, el importe
  * total de las compras que ha realizado.
- * 
+ * <p>
  * La estructura de los ficheros binarios de ventas responde al siguiente
  * esquema:
  * 
@@ -29,7 +29,7 @@ import java.util.Scanner;
  * Los datos de ventas de estos ficheros están ordenados en orden creciente
  * de códigos de cliente, de forma que las ventas de un mismo cliente están
  * almacenadas, necesariamente, de forma consecutiva.
- * 
+ * <p>
  * La interacción con el operador es como sigue:
  * 
  * <pre>
@@ -55,7 +55,7 @@ public class ResumenVentas {
 
 	/**
 	 * Pre: ---
-	 * 
+	 * <p>
 	 * Post: Ha solicitado al operador el nombre de un fichero de ventas y
 	 * ha escrito en la pantalla un resumen de las ventas, listando, para
 	 * cada código de cliente, el importe total de las compras que ha
@@ -79,7 +79,7 @@ public class ResumenVentas {
 
 	/**
 	 * Pre: ---
-	 * 
+	 * <p>
 	 * Post: Ha escrito un encabezado a los datos del resumen
 	 */
 	protected static void escribirEncabezado() {
@@ -94,7 +94,7 @@ public class ResumenVentas {
 	/**
 	 * Pre: f es no nulo y permite leer de un fichero binario de ventas con
 	 * la estructura y características planteadas en el enunciado
-	 * 
+	 * <p>
 	 * Post: Ha escrito en la pantalla un resumen de las ventas, listando,
 	 * para cada código de cliente, el importe total de las compras que ha
 	 * realizado.
@@ -140,7 +140,7 @@ public class ResumenVentas {
 						// importe de su primera compra
 						total = ultima.precioUnitario() * ultima.cantidad();
 					}
-					// Para la siguiente iteración, leemos un datos más. La
+					// Para la siguiente iteración, leemos un dato más. La
 					// última venta leída en esta iteración será la
 					// penúltima en la siguiente
 					penultima = ultima;

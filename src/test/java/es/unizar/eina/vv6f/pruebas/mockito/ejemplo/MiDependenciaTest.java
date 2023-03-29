@@ -15,7 +15,7 @@ import static org.mockito.Mockito.*;
 /**
  * Basado en: Lars Vogel, Fabian Pfaff. «Unit tests with Mockito – Tutorial».
  * Vogella. Version 1.9. 10-4-2017. 
- * http://www.vogella.com/tutorials/Mockito/article.html [accedido el 28-4-2020]
+ * <a href="http://www.vogella.com/tutorials/Mockito/article.html">http://www.vogella.com/tutorials/Mockito/article.html</a> [accedido el 28-4-2020]
  */
 public class MiDependenciaTest {
 
@@ -48,7 +48,7 @@ public class MiDependenciaTest {
     // Demonstrates the return of multiple values
     @Test
     public void testMoreThanOneReturnValue_1()  {
-        Iterator iterator = mock(Iterator.class);
+        Iterator<String> iterator = mock(Iterator.class);
         when(iterator.next()).thenReturn("Mockito").thenReturn("rocks");
         String result = iterator.next() + " " + iterator.next();
         assertEquals("Mockito rocks", result);
@@ -58,7 +58,7 @@ public class MiDependenciaTest {
     // Demonstrates the return of multiple values
     @Test
     public void testMoreThanOneReturnValue_2()  {
-        Iterator iterator = mock(Iterator.class);
+        Iterator<String> iterator = mock(Iterator.class);
         when(iterator.next()).thenReturn("Mockito", "rocks");
         String result = iterator.next() + " " + iterator.next();
         assertEquals("Mockito rocks", result);
@@ -68,7 +68,7 @@ public class MiDependenciaTest {
     // this test demonstrates how to return values based on the input
     @Test
     public void testReturnValueDependentOnMethodParameter()  {
-        Comparable c = mock(Comparable.class);
+        Comparable<String> c = mock(Comparable.class);
         when(c.compareTo("Mockito")).thenReturn(1);
         when(c.compareTo("Eclipse")).thenReturn(2);
         assertEquals(1, c.compareTo("Mockito"));
@@ -78,7 +78,7 @@ public class MiDependenciaTest {
 
     @Test
     public void testReturnValueIndependentOnMethodParameter()  {
-        Comparable c = mock(Comparable.class);
+        Comparable<Object> c = mock(Comparable.class);
         when(c.compareTo(anyInt())).thenReturn(-1);
         assertEquals(-1, c.compareTo(9));
         assertEquals(0, c.compareTo("Mockito"));
@@ -88,7 +88,7 @@ public class MiDependenciaTest {
     // return a value based on the type of the provide parameter
     @Test
     public void testReturnValueInDependentOnMethodClass()  {
-        Comparable c= mock(Comparable.class);
+        Comparable<Object> c = mock(Comparable.class);
         when(c.compareTo(isA(Object.class))).thenReturn(0);
         when(c.compareTo(isA(MiDependencia.class))).thenReturn(87);
         when(c.compareTo(isA(String.class))).thenReturn(105);

@@ -11,7 +11,7 @@ import static org.mockito.Mockito.*;
 /**
  * Basado en: Lars Vogel, Fabian Pfaff. «Unit tests with Mockito – Tutorial».
  * Vogella. Version 1.9. 10-4-2017.
- * http://www.vogella.com/tutorials/Mockito/article.html [accedido el 28-4-2020]
+ * <a href="http://www.vogella.com/tutorials/Mockito/article.html">http://www.vogella.com/tutorials/Mockito/article.html</a> [accedido el 28-4-2020]
  */
 
 @RunWith(MockitoJUnitRunner.class)
@@ -39,7 +39,7 @@ public class MiDependenciaTestAnotada {
         // was the method obtenerId called twice?
         verify(mock, times(2)).obtenerId();
 
-        // other alternatives for verifiying the number of method calls for a method
+        // other alternatives for verifying the number of method calls for a method
         verify(mock, never()).noUsar();
         verify(mock, atLeastOnce()).probar(12);
         verify(mock, atLeast(2)).obtenerId(); // called at least twice

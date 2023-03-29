@@ -31,7 +31,7 @@ public class Venta {
 
 	/**
 	 * Pre: cantidad > 0; precioUnitario > 0.0
-	 * 
+	 * <p>
 	 * Post: Ha inicializado los atributos de esta nueva venta a partir de
 	 * los valores de los parámetros
 	 */
@@ -75,7 +75,7 @@ public class Venta {
 
 	/**
 	 * Pre: f no es nulo y no ha sido cerrado previamente
-	 * 
+	 * <p>
 	 * Post: Ha leído los datos de una venta de «f» y ha devuelto un nuevo
 	 * objeto de la clase Venta creado a partir de los datos leídos. Si no
 	 * había datos suficientes o se ha producido algún error en la lectura,
