@@ -46,5 +46,6 @@ public class MiDependenciaLabelledTest {
         verify(mock, atLeast(2)).obtenerId(); // called at least twice
         verify(mock, atMost(3)).obtenerId(); // called at most 3 times
         verify(mock, times(5)).llamar5veces(); // called five times
+        verifyNoMoreInteractions(mock);
     }
 }

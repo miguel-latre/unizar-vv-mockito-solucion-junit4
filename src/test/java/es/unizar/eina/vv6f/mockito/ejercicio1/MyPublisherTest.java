@@ -8,6 +8,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 public class MyPublisherTest {
     private static final String FIRST_MESSAGE = "1st message";
@@ -31,6 +32,7 @@ public class MyPublisherTest {
 
         // Comprobación del estado del mock
         verify(subscriber).receive(FIRST_MESSAGE);
+        verifyNoMoreInteractions(subscriber);
     }
 
     @Test
@@ -53,6 +55,7 @@ public class MyPublisherTest {
         // Comprobación del estado de los mocks
         verify(subscriber1).receive(FIRST_MESSAGE);
         verify(subscriber2).receive(FIRST_MESSAGE);
+        verifyNoMoreInteractions(subscriber1, subscriber2);
     }
 
     @Test
@@ -78,6 +81,7 @@ public class MyPublisherTest {
         verify(subscriber2).receive(FIRST_MESSAGE);
         verify(subscriber1).receive(SECOND_MESSAGE);
         verify(subscriber2).receive(SECOND_MESSAGE);
+        verifyNoMoreInteractions(subscriber1, subscriber2);
     }
 
     @Test
@@ -107,6 +111,6 @@ public class MyPublisherTest {
         verify(subscriber1).receive(FIRST_MESSAGE);
         verify(subscriber1).receive(SECOND_MESSAGE);
         verify(subscriber2).receive(SECOND_MESSAGE);
+        verifyNoMoreInteractions(subscriber1, subscriber2);
     }
-
 }

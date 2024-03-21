@@ -138,5 +138,6 @@ public class MiDependenciaTest {
         verify(mock, atLeast(2)).obtenerId();   // el método «obtenerId» se invocó al menos 2 veces
         verify(mock, atMost(3)).obtenerId();    // el método «obtenerId» se invocó como mucho 3 veces
         verify(mock, times(5)).llamar5veces();  // el método «llamar5veces» se exactamente 5 veces
+        verifyNoMoreInteractions(mock);
     }
 }
