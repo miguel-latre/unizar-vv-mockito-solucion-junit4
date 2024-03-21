@@ -1,4 +1,4 @@
-package es.unizar.eina.vv6f.pruebas.mockito.ejercicio2;
+package es.unizar.eina.vv6f.mockito.ejercicio2;
 
 import org.junit.*;
 import java.io.*;

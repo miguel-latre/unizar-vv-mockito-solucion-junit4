@@ -1,13 +1,18 @@
-package es.unizar.eina.vv6f.pruebas.mockito.ejercicio1;
+package es.unizar.eina.vv6f.mockito.ejercicio1;
 
+import es.unizar.eina.vv6f.mockito.ejemplo.MiDependencia;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.mockito.Mockito.verify;
 
 public class MyPublisherTest {
     private static final String FIRST_MESSAGE = "1st message";
     private static final String SECOND_MESSAGE = "2nd message";
+
 
     @Test
     public void test_1subscriber_1message() {

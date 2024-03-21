@@ -1,4 +1,4 @@
-package es.unizar.eina.vv6f.pruebas.mockito.ejemplo;
+package es.unizar.eina.vv6f.mockito.ejemplo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,12 +10,13 @@ import static org.mockito.Mockito.*;
 
 /**
  * Basado en: Lars Vogel, Fabian Pfaff. «Unit tests with Mockito – Tutorial».
- * Vogella. Version 1.9. 10-4-2017.
- * <a href="http://www.vogella.com/tutorials/Mockito/article.html">http://www.vogella.com/tutorials/Mockito/article.html</a> [accedido el 28-4-2020]
+ * Vogella. Version 2.3,16.08.2021.
+ * <a href="http://www.vogella.com/tutorials/Mockito/article.html">Unit tests with Mockito - Tutorial</a>
+ * [accedido el 19-3-2024]
  */
 
 @RunWith(MockitoJUnitRunner.class)
-public class MiDependenciaTestAnotada {
+public class MiDependenciaLabelledTest {
 
     @Mock
     private MiDependencia mock;
